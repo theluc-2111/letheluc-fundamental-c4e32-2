@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body> 
+    <form method="POST">
+        <label>Mon an </label>
+        <input name="name"/>
+        <label >gia mon</label>
+        <input name="price"/>
+        <p>
+            <input type="submit" value="submit"/>
+        </p>
+
+    </form>
+ 
+ 
+    {% for dish in data %}
+ 
+    <h1>{{ dish._id }}  {{ dish.name }} - {{ dish.price }}k  <a href="edit_food/{{ dish._id}}">Sửa</a>  </h1>
+     
+ 
+    {% endfor %}
+ 
+</body>
+
+</html>
